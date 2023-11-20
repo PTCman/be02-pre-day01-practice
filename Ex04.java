@@ -3,15 +3,19 @@ package day01;
 public class Ex04 {
     public static void main(String[] args) {
         // 1은 가위, 2는 바위, 3은 보
+        Player player1 = new Player();
+        player1.name = "player01";
+        Player player2 = new Player();
+        player2.name = "player02";
 
         while(true){
-            int player01 = (int)(Math.random()*3)+1;
-            int player02 = (int)(Math.random()*3)+1;
+            player1.weapon = (int)(Math.random()*3)+1;
+            player2.weapon = (int)(Math.random()*3)+1;
 
-            if(player01 == player02){
+            if(player1.weapon == player2.weapon){
                 continue;
             }
-            else if((player01==1 && player02==3) || (player01 == 2 && player02 == 1) || (player01 == 3 && player02 ==2)){
+            else if((player1.weapon==1 && player2.weapon==3) || (player1.weapon == 2 && player2.weapon == 1) || (player1.weapon == 3 && player2.weapon ==2)){
                 System.out.println("player1 win");
                 break;
             } else {
