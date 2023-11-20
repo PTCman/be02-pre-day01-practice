@@ -1,0 +1,33 @@
+package day01;
+
+public class Ex04 {
+    public static void main(String[] args) {
+        // 1은 가위, 2는 바위, 3은 보
+
+        while(true){
+            int player01 = (int)(Math.random()*3)+1;
+            int player02 = (int)(Math.random()*3)+1;
+
+            if(player01 == player02){
+                continue;
+            }
+            else if((player01==1 && player02==3) || (player01 == 2 && player02 == 1) || (player01 == 3 && player02 ==2)){
+                System.out.println("player1 win");
+                break;
+            } else {
+                System.out.println("player2 win");
+                break;
+            }
+        }
+
+        // Player는 이름이 있고 가위 바위 보 중 하나를 저장할 수 있다.
+
+        // player01이 가위, 바위, 보 중 랜덤하게 하나를 선택
+
+        // player02가 가위, 바위, 보 중 랜덤하게 하나를 선택
+        
+        // 둘 중에 이긴 사람 출력, 무승부면 계속 반복
+
+
+    }
+}
