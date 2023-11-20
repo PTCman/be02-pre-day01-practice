@@ -48,12 +48,19 @@ public class Ex03 {
          ----------
          */
         System.out.println();
+
+
         int a = 1;
+        int k = 5;
         for(int i=0;i<5;i++){
+            for(int z = k;z>0;z--){
+                System.out.print(" ");
+            }
             for(int j=0;j<i+a;j=j+2){
                 System.out.print("*");
             }
             a = a+3;
+            k--;
             System.out.println();
         }
     }
